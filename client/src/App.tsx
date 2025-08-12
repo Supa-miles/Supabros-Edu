@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import Tutorial from "@/pages/tutorial";
+import Certification from "@/pages/certification";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -12,6 +13,8 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/tutorial/:slug" component={Tutorial} />
+      <Route path="/certifications" component={Certification} />
+      <Route path="/certifications/:category" component={Certification} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -49,6 +49,23 @@ export default function Header({ onToggleSidebar }: HeaderProps) {
           </Link>
         </div>
         
+        <nav className="hidden md:flex items-center space-x-6">
+          <Link 
+            href="/" 
+            className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+            data-testid="nav-tutorials"
+          >
+            Tutorials
+          </Link>
+          <Link 
+            href="/certifications" 
+            className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+            data-testid="nav-certifications"
+          >
+            Certifications
+          </Link>
+        </nav>
+
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex relative">
             <div className="relative">
