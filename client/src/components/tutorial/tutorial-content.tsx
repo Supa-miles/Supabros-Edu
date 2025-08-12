@@ -77,8 +77,8 @@ export default function TutorialContent({ tutorial }: TutorialContentProps) {
 
         {/* Interactive Code Editor */}
         <CodeEditor 
-          initialCode={tutorial.codeExample || getDefaultCode(tutorial.language)}
-          language={tutorial.language}
+          initialCode={tutorial.codeExample || getDefaultCode(tutorial.language || "javascript")}
+          language={tutorial.language || "javascript"}
         />
 
         {/* Best Practices */}
@@ -88,7 +88,7 @@ export default function TutorialContent({ tutorial }: TutorialContentProps) {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {getBestPractices(tutorial.language).map((practice, index) => (
+              {getBestPractices(tutorial.language || "javascript").map((practice, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
                     {practice.type === 'do' ? (

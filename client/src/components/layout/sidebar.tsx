@@ -102,7 +102,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
                           data-testid={`link-tutorial-${tutorial.id}`}
                         >
                           <div className="flex items-center space-x-2">
-                            <i className={getLanguageIcon(tutorial.language)} />
+                            <i className={getLanguageIcon(tutorial.language || "javascript")} />
                             <span>{tutorial.title}</span>
                           </div>
                         </Link>

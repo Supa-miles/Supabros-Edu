@@ -24,8 +24,8 @@ export const tutorials = pgTable("tutorials", {
   difficulty: text("difficulty").notNull().default("beginner"),
   readTime: integer("read_time").notNull().default(10),
   order: integer("order").notNull().default(0),
-  nextTutorial: varchar("next_tutorial").references(() => tutorials.id),
-  prevTutorial: varchar("prev_tutorial").references(() => tutorials.id),
+  nextTutorial: varchar("next_tutorial"),
+  prevTutorial: varchar("prev_tutorial"),
 });
 
 export const userProgress = pgTable("user_progress", {

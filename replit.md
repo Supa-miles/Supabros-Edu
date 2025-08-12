@@ -1,6 +1,6 @@
 # Overview
 
-SupaBros Edu is a modern educational platform for learning programming languages through interactive tutorials and hands-on exercises. The application provides structured courses covering frontend and backend development, with features like code editors, syntax highlighting, progress tracking, and responsive design. Built as a full-stack web application, it offers an engaging learning experience with real-world programming examples.
+SupaBros Edu is a comprehensive educational platform offering 50+ programming languages with structured tutorials from beginner to fullstack development. The application features interactive code editors, syntax highlighting, comprehensive course content, and hands-on exercises. Built as a complete W3Schools clone, it covers every major programming language including frontend (HTML, CSS, JavaScript, React, Vue), backend (Python, Java, Node.js, C#, Go), mobile (Swift, Dart, Flutter), data science (R, MATLAB, Julia), functional programming (Haskell, Lisp), and specialized domains (Solidity, VHDL). The platform provides an engaging learning experience with real-world programming examples and progressive skill development.
 
 # User Preferences
 
@@ -26,7 +26,9 @@ Preferred communication style: Simple, everyday language.
 - **Database**: PostgreSQL configured through Drizzle ORM with type-safe schema definitions
 - **ORM**: Drizzle ORM for database interactions with automatic TypeScript type generation
 - **Schema**: Structured tables for courses, tutorials, and user progress with proper foreign key relationships
-- **Development Storage**: In-memory storage implementation for development with seeded data
+- **Development Storage**: In-memory storage implementation with comprehensive seeded data covering 50+ programming languages
+- **Course Coverage**: Frontend (HTML, CSS, JavaScript, TypeScript, React, Vue, Angular, Svelte), Backend (Python, Java, C#, Node.js, PHP, Ruby, Go, Rust, Kotlin, Scala), Systems (C, C++, Assembly, D, Nim, Zig), Mobile (Swift, Dart, Flutter, React Native), Database (SQL, NoSQL, GraphQL), Data Science (R, MATLAB, Julia), Scripting (Bash, PowerShell, Perl, Lua), Functional (Haskell, Lisp, Scheme, F#, OCaml), and Specialized (Solidity, VHDL, Verilog)
+- **Tutorial Structure**: Each language includes beginner to advanced tutorials with progressive learning paths, code examples, and best practices
 - **Migrations**: Drizzle Kit for database schema migrations and management
 
 ## Component Architecture
