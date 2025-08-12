@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(180 6.6667% 97.0588%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(151.8 60.6% 36.3%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(207 9.3% 21.6%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(240 1.9608% 90%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(37.6 88.5% 50%);
+  --accent-foreground: hsl(210 25% 7.8431%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(201.4286 30.4348% 90.9804%);
+  --input: hsl(200 23.0769% 97.4510%);
+  --ring: hsl(151.8 60.6% 36.3%);
+  --code-bg: hsl(210 12% 10%);
+  --code-text: hsl(0 0% 87%);
+  --sidebar-bg: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(210 25% 7.8431%);
+  --nav-hover: hsl(210 40% 98%);
+  --font-sans: Inter, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(0 0% 3.9%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(0 0% 3.9%);
+  --card-foreground: hsl(0 0% 98%);
+  --popover: hsl(0 0% 3.9%);
+  --popover-foreground: hsl(0 0% 98%);
+  --primary: hsl(151.8 60.6% 36.3%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(0 0% 14.9%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(0 0% 14.9%);
+  --muted-foreground: hsl(0 0% 63.9%);
+  --accent: hsl(37.6 88.5% 50%);
+  --accent-foreground: hsl(0 0% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(0 0% 14.9%);
+  --input: hsl(0 0% 14.9%);
+  --ring: hsl(151.8 60.6% 36.3%);
+  --code-bg: hsl(210 12% 10%);
+  --code-text: hsl(0 0% 87%);
+  --sidebar-bg: hsl(0 0% 3.9%);
+  --sidebar-foreground: hsl(0 0% 98%);
+  --nav-hover: hsl(0 0% 8%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  code {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  pre {
+    @apply bg-code-bg text-code-text p-4 rounded-lg overflow-x-auto;
+    font-family: var(--font-mono);
+  }
+
+  .syntax-keyword {
+    @apply text-blue-400;
+  }
+
+  .syntax-string {
+    @apply text-orange-300;
+  }
+
+  .syntax-comment {
+    @apply text-green-400;
+  }
+
+  .syntax-tag {
+    @apply text-cyan-300;
+  }
+
+  .syntax-attribute {
+    @apply text-yellow-300;
+  }
+
+  .nav-item {
+    @apply transition-colors duration-200;
+  }
+
+  .nav-item:hover {
+    background-color: var(--nav-hover);
+  }
+
+  .progress-bar {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .code-editor {
+    font-family: var(--font-mono);
+    background-color: var(--code-bg);
+    color: var(--code-text);
+  }
+}
+
+.monaco-editor {
+  border-radius: 0.5rem;
+}
+
+.monaco-editor .margin {
+  background-color: var(--code-bg) !important;
+}
